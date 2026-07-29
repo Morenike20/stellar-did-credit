@@ -57,7 +57,7 @@
           "function": {
             "contract_fn": {
               "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
-              "function_name": "set_vc_count",
+              "function_name": "anchor_vc",
               "args": [
                 {
                   "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4"
@@ -66,8 +66,9 @@
                   "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M"
                 },
                 {
-                  "u32": 2
-                }
+                  "bytes": "0101010101010101010101010101010101010101010101010101010101010101"
+                },
+                "void"
               ]
             }
           },
@@ -205,7 +206,7 @@
                         "symbol": "score"
                       },
                       "val": {
-                        "u32": 388
+                        "u32": 344
                       }
                     },
                     {
@@ -232,7 +233,7 @@
                         "symbol": "vc_count"
                       },
                       "val": {
-                        "u32": 2
+                        "u32": 1
                       }
                     }
                   ]
@@ -296,7 +297,7 @@
             "key": {
               "vec": [
                 {
-                  "symbol": "VcCount"
+                  "symbol": "VcList"
                 },
                 {
                   "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M"
@@ -316,7 +317,7 @@
                 "key": {
                   "vec": [
                     {
-                      "symbol": "VcCount"
+                      "symbol": "VcList"
                     },
                     {
                       "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M"
@@ -325,7 +326,26 @@
                 },
                 "durability": "persistent",
                 "val": {
-                  "u32": 2
+                  "vec": [
+                    {
+                      "map": [
+                        {
+                          "key": {
+                            "symbol": "vc_id"
+                          },
+                          "val": {
+                            "bytes": "0101010101010101010101010101010101010101010101010101010101010101"
+                          }
+                        },
+                        {
+                          "key": {
+                            "symbol": "vc_type"
+                          },
+                          "val": "void"
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             },
